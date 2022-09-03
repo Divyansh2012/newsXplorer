@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<div class="row-grid">
+  <!-- new posts -->
+  <div class="news-width">
+    {% for post in data %}
+    <div class="news-content">
+      <h1>{{ post.title }}</h1>
+      <p>{{ post.description }}</p>
+      <img src="{{ post.imgUrl }}" width="400" />
+    </div>
+    {% endfor%}
+  </div>
+  <div class="sidebar">
+    <!-- hacker new posts -->
+    <!-- {% for post in hacker_posts %}
+    {{ post.time }}
+    {{ post.title }}
+    {{ post.url }}
+  {% endfor%} -->
+  </div>
+</div>
+
+{% endblock content %}
